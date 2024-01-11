@@ -13,111 +13,109 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    * {
+      box-sizing: border-box; /*always include this for managing space within css*/
+    }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
 
-    .attribution{
+    .attribution {
       margin-bottom: 0;
     }
 
-    body{
-      background-color:   hsl(30, 38%, 92%);
-      font-family: 'Montserrat', sans-serif;
+    body {
+      background-color: hsl(30, 38%, 92%);
+      font-family: "Montserrat", sans-serif;
       padding: 0;
       margin: 0;
       text-decoration: none;
       justify-content: center;
-           
     }
 
-    .section{
+    .section {
       width: 100%;
       margin: auto;
       /*display: flex;*/
       align-items: center;
       justify-content: center;
-
     }
 
-    .container{
+    .container {
       width: 900px;
       margin: auto;
       display: flex;
       height: 800px;
-      
-      
     }
 
-    .left{
-      width:50%;
+    .left,
+    .right {
+      width: 50%;
       padding: 10px;
       margin: auto;
-
-    }
-    
-    .right{
-      width:50%;
-      margin: auto;
     }
 
-    .card{
-      border: 1px solid  rgba(230, 230, 230, 0.4);
+    .card {
+      border: 1px solid rgba(230, 230, 230, 0.4);
       padding: 21px 21px 15px 21px;
       margin-left: -10px;
       background-color: rgba(230, 230, 230, 0.4);
     }
 
-    img{
-      max-width:100%;
+    img {
+      max-width: 100%;
     }
 
-    p{
+    p {
       font-size: 14px;
     }
 
-    h1{
+    h1 {
       font-size: 20px;
       letter-spacing: 5px;
       font-weight: 100;
     }
 
-    button{
+    button {
       text-decoration: none;
       width: 100%;
       height: 29px;
-      background-color:  hsl(158, 36%, 37%);
+      background-color: hsl(158, 36%, 37%);
       font-size: 20px;
       text-transform: capitalize;
       border-radius: 10px;
       color: white;
       margin-top: 10px;
-  
     }
 
-    @media(max-width: 375px){
-
-      .section{
-        display: block;
-        align-items: center;
+    @media (max-width: 450px) {
+      .container {
+        /* flex-direction: column;
         justify-content: center;
-      }
-      .container{
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
         height: 100vh;
-        margin-top: 30px;
-        padding: 30px;
-      }
-      .left{
+        margin-top: 30px;*/
+        flex-direction: column;
+        background-color: red;
         width: 100%;
+        height: auto;
       }
-      .right{
+      .left {
         width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      .right {
+        width: 100%;
+        margin-top: -5px;
+        padding-top: 0;
+        background-color: orange;
+        padding: 20px 40px;
       }
     }
-
-
   </style>
 </head>
 <body>
@@ -149,15 +147,20 @@
         <p class="price">$149.99
           $169.99</p>
 
-          <button>add to cart</button>
+          <button><i class="fa-solid fa-cart-plus"></i>add to cart</button>
         
       </div>
     </div>
   </div>
   
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
+
+  <script
+  src="https://kit.fontawesome.com/551d9d6a0c.js"
+  crossorigin="anonymous"
+></script>
 </body>
 </html>
